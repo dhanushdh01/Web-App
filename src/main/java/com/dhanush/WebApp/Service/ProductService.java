@@ -39,4 +39,14 @@ public class ProductService {
     public void deleteProduct(int prodId) {
         repo.deleteById(prodId);
     }
+
+    public List<Product> getProductByPriceRange(int min, int max) {
+        List<Product> products = new ArrayList<>();
+        for (Product product : repo.findAll()) {
+            if (product.getPrice() >= min && product.getPrice() <= max) {
+                products.add(product);
+            }
+        }
+        return products;
+    }
 }

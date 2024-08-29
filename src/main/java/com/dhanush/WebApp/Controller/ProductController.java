@@ -39,6 +39,10 @@ public class ProductController {
         productService.deleteProduct(prodId);
     }
 
+    @GetMapping("/products/price/{min}/{max}")
+    public List<Product> getProductByPriceRange(@PathVariable int min, @PathVariable int max) {
+        return productService.getProductByPriceRange(min, max);
+    }
     /*
     Features to be added:
 
@@ -47,7 +51,8 @@ public class ProductController {
     2.  getProductByBrand
     3.  searchProductByName
     4.  getAvailableProducts
-    5.  getProductsByPriceRange
+    5.  getProductsByPriceRange // By Dhanush
 
      */
+
 }
