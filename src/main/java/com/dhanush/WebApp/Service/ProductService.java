@@ -50,7 +50,9 @@ public class ProductService {
         return products;
     }
 
-    public Product getProductByName(String productName){
+    public Product getProductByBrand(String productName){
         return repo.findByProName().get();
     }
+
+
 }
