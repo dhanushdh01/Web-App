@@ -43,6 +43,11 @@ public class ProductController {
     public List<Product> getProductByPriceRange(@PathVariable int min, @PathVariable int max) {
         return productService.getProductByPriceRange(min, max);
     }
+
+    @GetMapping("/product/{productName}")
+    public Product getProductByName(@PathVariable String productName){
+        return productService.getProductByName(productName); 
+    }
     /*
     Features to be added:
 
