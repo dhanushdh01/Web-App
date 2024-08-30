@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -52,6 +53,16 @@ public class ProductService {
 
     public Product getProductByBrand(String productName){
         return repo.findByProName().get();
+
+    public Product getProductByName(String productName){
+        return repo.findByProdName(productName).get();
+    }
+    public List<Product> getProductsBYCategory(String category) {
+           List<Product> products = repo.findAllByCategory(category);
+            if(products.isEmpty())
+                throw new RuntimeException("There is no Product categorized with this " + category);
+            return products;
+
     }
 
 

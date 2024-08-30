@@ -48,11 +48,11 @@ public class ProductController {
     public Product getProductByBrand(@PathVariable String productName){
         return productService.getProductByBrand(productName); 
     }
-
-
-    
-    
-    /*
+    @GetMapping("/product/{searchproductName}")
+    public Product searchProductByName(@PathVariable String productName){
+        return productService.searchProductByName(productName); 
+    }
+    /*git 
     Features to be added:
 
     Clone the repository and add the following features to the project:
