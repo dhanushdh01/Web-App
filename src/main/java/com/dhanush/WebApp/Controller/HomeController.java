@@ -14,5 +14,9 @@ public class HomeController {
     public String about() {
         return "This is a simple web app using Spring Boot";
     }
+    @RequestMapping("/jobs")
+    public String jobs() {
+        return "search jobs";
+    }
 
 }

@@ -45,15 +45,14 @@ public class ProductController {
     }
 
     @GetMapping("/product/{productName}")
-    public Product getProductByName(@PathVariable String productName){
-        return productService.getProductByName(productName); 
+    public Product getProductByBrand(@PathVariable String productName){
+        return productService.getProductByBrand(productName); 
     }
-
-    @GetMapping("/products/category/{categoryName}")
-    public List<Product> getProductsByCategory(@PathVariable("categoryName") String categoryName){
-        return productService.getProductsBYCategory(categoryName);
+    @GetMapping("/product/{searchproductName}")
+    public Product searchProductByName(@PathVariable String productName){
+        return productService.searchProductByName(productName); 
     }
-    /*
+    /*git 
     Features to be added:
 
     Clone the repository and add the following features to the project:

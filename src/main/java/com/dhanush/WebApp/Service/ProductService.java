@@ -51,6 +51,9 @@ public class ProductService {
         return products;
     }
 
+    public Product getProductByBrand(String productName){
+        return repo.findByProName().get();
+
     public Product getProductByName(String productName){
         return repo.findByProdName(productName).get();
     }
@@ -59,5 +62,8 @@ public class ProductService {
             if(products.isEmpty())
                 throw new RuntimeException("There is no Product categorized with this " + category);
             return products;
+
     }
+
+
 }
