@@ -18,5 +18,8 @@ public class HomeController {
     public String jobs() {
         return "search jobs";
     }
+    public String contact() {
+        return "search contact";
+    }
 
 }

@@ -14,4 +14,8 @@ public class LoginController {
     public String logout() {
         return "Logout Page...";
     }
+    @RequestMapping("/Registation")
+    public String Registation() {
+        return "Registation Page...";
+    }
 }
